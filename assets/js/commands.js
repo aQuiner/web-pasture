@@ -33,7 +33,7 @@ const commands = [
   ["save", "Скачивает TikTok без водяного знака", ".save https://vm.tiktok.com/...", "", "media"],
   ["shadow", "Проверка видео на теневой бан", ".shadow https://vm.tiktok.com/...", "тень", "media"],
   ["sgs", "Конвертирует медиа в голосовое", ".sgs", "сгс, голос", "media"],
-  ["screenshot", "Скриншот веб-страницы", ".screenshot google.com", "ss, сс", "tools"],
+  ["ss", "Скриншот веб-страницы", ".ss google.com", "ss, сс", "tools"],
   ["snos", "Спам кодами авторизации Telegram", ".snos +79991234567", "снос", "tools"],
   ["shazam", "Распознает музыку", ".shazam", "шазам", "media"],
   ["spinf", "Анализ EXIF-метаданных", ".spinf", "инфо", "tools"],
@@ -48,5 +48,5 @@ const commands = [
   ["weather", "Погода и прогноз на завтра", ".weather Москва", "погода", "tools"],
   ["voice", "Перевод голоса в текст (Whisper)", ".voice", "воис, расшифруй, текст", "media"],
   ["tts", "Озвучка текста (Edge TTS + эффекты)", ".tts привет", "озвучь, озвучка", "media"],
-  ["check", "Проверка пользователя в базе PastureBot", ".check", "чек", "utility"]
+  ["check", "Проверка пользователя в базе PastureBot", ".check", "чек", "tools"]
 ];
