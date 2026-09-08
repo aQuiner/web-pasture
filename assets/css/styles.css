@@ -40,11 +40,20 @@ input, button, .copy-btn { user-select: auto; -webkit-user-select: auto; }
 button, input, kbd, .button, .command-card, .search-wrap, .cta, .toast, .brand-mark, .ua-flag {
   border-radius: 22px;
 }
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 body {
   margin: 0; color: var(--ink); background: var(--bg); font-family: Manrope, sans-serif;
   width: 100%; max-width: 100%; overflow-x: hidden; cursor: none;
   background-image: radial-gradient(circle at 80% 5%, rgba(125, 17, 34, .33), transparent 31rem), linear-gradient(115deg, transparent 0 45%, rgba(255, 51, 71, .025) 45% 45.2%, transparent 45.2% 100%);
+}
+/* iOS Safari игнорирует overflow-x:hidden на html/body, если внутри есть
+   position:absolute/fixed элементы, вылезающие за край экрана (например
+   .ambient-one/.ambient-two). Реальная обрезка на iOS работает только
+   через обычный блочный контейнер с overflow: hidden. */
+.page-shell {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 a { color: inherit; text-decoration: none; }
 .cursor-glow { width: 20px; height: 20px; border: 1px solid var(--red); border-radius: 50%; position: fixed; top: 0; left: 0; z-index: 20; pointer-events: none; transform: translate(-50%, -50%); transition: width .2s, height .2s, background .2s; mix-blend-mode: screen; }
