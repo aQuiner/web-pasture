@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pasture — бесплатный Telegram-бот с открытым списком команд." />
+    <title>Pasture — команды Telegram-бота</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="intro-screen is-visible" id="introScreen" aria-live="polite">
+      <div class="intro-message">
+        <img class="intro-banner" src="assets/images/bannerok.jpg" alt="" />
+        <span id="introMessage"></span>
+        <span class="intro-hint">Нажмите на экран, чтобы продолжить</span>
+      </div>
+    </div>
+    <audio id="introAudio" src="assets/audio/manera.mp3" preload="auto"></audio>
+    <div class="devil-flight" id="devilFlight" aria-hidden="true">
+      <img src="assets/images/devil.png" alt="" />
+    </div>
+    <div class="chat-widget" id="chatWidget">
+      <a class="chat-bubble" href="https://t.me/pasturechat" target="_blank" rel="noreferrer">
+        Написать в чат <span>↗</span>
+      </a>
+      <a class="chat-devil" href="https://t.me/pasturechat" target="_blank" rel="noreferrer" aria-label="Открыть чат Pasture">
+        <img src="assets/images/devil.png" alt="" />
+      </a>
+    </div>
+    <div class="cursor-glow"></div>
+    <div class="noise"></div>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#">
+        <img class="brand-avatar" src="assets/images/pasture-avatar.png" alt="Аватар Pasture" />
+        <span>pasture<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="nav">
+        <a href="#commands">Команды</a>
+        <a href="#about">О проекте</a>
+        <a class="telegram-link" href="https://t.me/pasturebot" target="_blank" rel="noreferrer">
+          Открыть в Telegram <span>↗</span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="pulse"></span> @pasturebot / telegram</div>
+        <h1>Всё нужное.<br /><em>В одном месте.</em></h1>
+        <p class="hero-copy">Pasture — бесплатный набор инструментов для Telegram.<br />Без подписок, скрытых функций и лишнего шума.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://t.me/pasturebot" target="_blank" rel="noreferrer">Запустить бота <span>↗</span></a>
+          <a class="button button-ghost" href="#commands">Смотреть команды <span>↓</span></a>
+        </div>
+      </section>
+
+      <section class="manifesto" id="about">
+        <div class="manifesto-content">
+          <h2>Никаких секретов.<br /><span>Даже в названии.</span></h2>
+          <p>Некоторые команды Pasture вдохновлены другими ботами. Мы не прячем это и не меняем привычные названия — всё честно, прозрачно и открыто.</p>
+          <div class="manifesto-stats">
+            <div><strong>50+</strong><span>команд</span></div>
+            <div><strong>0 ₽</strong><span>стоимость</span></div>
+            <div><strong>1</strong><span>разработчик</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="commands-section" id="commands">
+        <div class="section-heading">
+          <div>
+            <h2>Команды <span class="count" id="commandCount">50</span></h2>
+          </div>
+          <div class="search-wrap">
+            <span class="search-icon">⌕</span>
+            <input id="searchInput" type="search" placeholder="Найти команду..." autocomplete="off" />
+            <kbd>/</kbd>
+          </div>
+        </div>
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">Все</button>
+          <button class="filter" data-filter="ai">ИИ</button>
+          <button class="filter" data-filter="games">Игры</button>
+          <button class="filter" data-filter="media">Медиа</button>
+          <button class="filter" data-filter="tools">Инструменты</button>
+          <button class="filter" data-filter="chat">Чаты</button>
+        </div>
+        <div class="commands-grid" id="commandsGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <span>⌁</span>
+          <h3>Ничего не нашли</h3>
+          <p>Попробуйте другое название или алиас команды.</p>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="cta-pattern"></div>
+        <h2>Попробуйте сами.</h2>
+        <p>Откройте Telegram и напишите <code>/help</code>, чтобы начать.</p>
+        <a class="button button-light" href="https://t.me/pasturebot" target="_blank" rel="noreferrer">Открыть @pasturebot <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Свободные команды для свободных людей <i class="ua-flag" aria-label="Украинский флаг"></i></span>
+      <a href="https://t.me/pasturebot" target="_blank" rel="noreferrer">@pasturebot ↗</a>
+    </footer>
+    <div class="toast" id="toast">Команда скопирована</div>
+    <script src="assets/js/commands.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
