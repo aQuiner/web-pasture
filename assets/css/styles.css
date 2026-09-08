@@ -15,7 +15,7 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 9; pointer-events
 .intro-banner { display: block; width: min(72vw, 520px); height: min(42vw, 300px); object-fit: cover; border-radius: 28px; margin-bottom: 18px; }
 .intro-banner { opacity: .4; }
 .intro-hint { display: block; margin-top: 10px; color: var(--muted); font-size: 12px; opacity: .85; }
-.devil-flight { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; pointer-events: none; opacity: 0; visibility: hidden; }
+.devil-flight { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; pointer-events: none; opacity: 0; visibility: hidden; overflow: hidden; }
 .devil-flight img { width: min(82vw, 820px); height: auto; object-fit: contain; border-radius: 0; opacity: .96; filter: saturate(1.8) contrast(1.4) drop-shadow(0 0 70px rgba(255, 0, 30, .9)); transform: translate(-115vw, 28vh) rotate(-18deg) scale(.25); }
 .devil-flight.is-flying { opacity: 1; visibility: visible; }
 .devil-flight.is-flying img { animation: devil-flight 1.25s cubic-bezier(.2, .8, .2, 1) forwards; }
